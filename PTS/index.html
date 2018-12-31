@@ -1,154 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>YEBO</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
-<!-- 
-	Cat web boi: Luc Duc Thanh, admin trang http://mylop.edu.vn, giao vien FPT Arena
-	Phan mem: Sublime Text, Photoshop 
-	Cap nhat: 12/5/2015 12:20AM
-	Ban quyen: Luc Duc Thanh, ban duoc phep su dung ma nguon nay voi dieu kien phai LIKE page MyLop!hehe
--->
+
 <body>
-	<!-- HEADER -->
-	<header class="container-fluid">
-		<div class="container">
-			<div class="top-header">
-				<div class="logo">
-					<a href="index.html"><img src="images/logo.png" alt="logo"></a>
-				</div>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#!" class="nav__link">About us</a> <!-- IN HOA, IN ĐẬM-->
+                </li>
+                <li class="nav__item">
+                    <a href="#!" class="nav__link">Work</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#!" class="nav__link">
+                        <img src="images/yebo-logo.png" alt="logo" class="nav__logo">
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#!" class="nav__link">Shop</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#!" class="nav__link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-				<div class="form">
-					<form action="#">
-						<input type="text" placeholder="Search">
-						<input type="submit">
-					</form>
-				</div>
-			</div><!-- end of row 1 (.top-header) -->
-			<div class="menu clearfix">
-				<ul>
-					<li><a href="#"><span>Home</span></a></li>
-					<li><a href="#" class="current"><span>Services</span></a></li>
-					<li><a href="#"><span>Project</span></a></li>
-					<li><a href="#"><span>About us</span></a></li>
-					<li><a href="#"><span>Contact us</span></a></li>
-				</ul>
-			</div><!-- end of row 2 (.menu) -->
-		</div>
-	</header><!-- end of header -->
 
-	<!-- SERVICES SECTION -->
-	<section class="container-fluid service">
-		<div class="container">
-			<h1>Services.</h1>
-		</div>
-	</section><!-- end of .service -->
 
-	<!-- MAIN CONTENT -->
-	<section class="container-fluid main">
-		<div class="container">
-			<div class="row">
-				<!-- content -->
-				<div class="content">
-					<div class="welcome">
-						<h3>Services company</h3>
-						<p class="sapo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget bibendum tellus. Nunc vel imperdiet tellus. Mauris ornare aliquam urna, accumsan bibendum eros auctor ac.</p>
-						<p>Suspendisse adipiscing rhoncus massa, sit amet sollicitudin quam vulputate non. In non turpis nisl. 
-Curabitur purus mi, pharetra vitae viverra et, mattis sit amet nunc. Quisque enim ipsum, convallis sit amet molestie in, placerat vel urna. Praesent congue auctor elit, nec pretium ipsum volutpat vitae. Vivamus eget ipsum sit amet ipsum tincidunt fermentum.</p>
-					</div><!-- end of .welcome -->
+    <div class="feature">
+        <div class="feature__header">
+            <!-- ĐẶT TÊN CLASS LÀ IMG-TOP HAY HEADING ĐỂ NHẰM MỤC ĐÍCH DÙNG LẠI -->
+            <img src="images/icon1.png" alt="icon" class="feature__img-top">
+            <h2 class="feature__heading">A NEW GENERATION OF VINTAGE BIKE</h2>
+            <p class="feature__header-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio similique
+                hic praesentium aspernatur quo nulla reiciendis minima excepturi. Impedit sunt laboriosam alias
+                quibusdam aperiam vitae exercitationem ipsam fuga temporibus debitis!</p>
+        </div>
+        <ul class="feature__list">
+            <li class="feature__item">
+                <div class="feature__item-img">
+                    <img src="./images/img14.jpg" alt="bg" class="img__bg">
+                    <img src="./images/img-bicycle-company.png" alt="brand" class="img__brand">
+                </div>
+                <div class="feature__item-content">
+                    <div class="feature__item-content-top">
+                        <img src="./images/icon2.png" alt="" class="feature__img-top">
+                        <h3 class="feature__heading">Vintage Oliva</h3>
+                        <p class="feature__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
+                            nesciunt facilis error, sunt asperiores amet hic aspernatur eius pariatur sequi assumenda
+                            vero laudantium labore quo quas. Mollitia ipsa cumque repellendus.</p>
+                    </div>
+                    <div class="feature__item-content-bottom">
+                        <img src="./images/img1.jpg" alt="bg" class="img__bg">
+                    </div>
+                </div>
+            </li>
 
-					<div class="box-row">
-						<div class="box">
-							<h3>Featured service 1</h3>
-							<img src="images/service1.png" alt="">
-							<p><strong>Lorem Ipsum default model text,</strong> and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-							<p class="order-now"><a href="#">Order now</a></p>
-						</div>
-						<div class="box">
-							<h3>Featured service 2</h3>
-							<img src="images/service2.png" alt="">
-							<p><strong>Various versions have evolved</strong> over the years, sometimes by accident, sometimes on purpose (injected humour and the like). Where does it come from?</p>
-							<p class="order-now"><a href="#">Order now</a></p>
-						</div>
-					</div>
 
-					<div class="box-row clearfix">
-						<div class="box">
-							<h3>Featured service 3</h3>
-							<img src="images/service3.png" alt="">
-							<p><strong>Contrary to popular belief, Lorem Ipsum is not simply random text.</strong> It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered </p>
-							<p class="order-now"><a href="#">Order now</a></p>
-						</div>
-						<div class="box">
-							<h3>Featured service 4</h3>
-							<img src="images/service4.png" alt="">
-							<p><strong>Various versions have evolved</strong> over the years, sometimes by accident, sometimes on purpose (injected humour and the like). Where does it come from?</p>
-							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical </p>
-							<p class="order-now"><a href="#">Order now</a></p>
-						</div>
-					</div>
-				</div><!-- end of content -->
-				
-				<!-- sidebar -->
-				<div class="sidebar">
-					<div class="news">
-						<h3>News &amp; Events</h3>
-						<ul>
-							<li>
-								<span>5th / April / 2009</span>
-								<p>Integer mauris. Cras iaculis viverra dolorqw. Nulla suscipit.</p>
-							</li>
-							<li>
-								<span>6th / April / 2009</span>
-								<p>Cras iaculis viverra dolor. Nulla suscipit. Proin eu sapien ac sem fermentum sollicitudin.</p>
-							</li>
-							<li>
-								<span>7th / April / 2009</span>
-								<p>Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
-							</li>
-						</ul>
+            <li class="feature__item">
+                <div class="feature__item-img">
+                    <img src="./images/img3.jpg" alt="bg" class="img__bg">
+                    <img src="./images/img-vintage.png" alt="brand" class="img__brand">
+                </div>
+                <div class="feature__item-content">
+                    <div class="feature__item-content-top">
+                        <img src="./images/icon3.png" alt="" class="feature__img-top">
+                        <h3 class="feature__heading">La Boriosa</h3>
+                        <p class="feature__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
+                            nesciunt facilis error, sunt asperiores amet hic aspernatur eius pariatur sequi assumenda
+                            vero laudantium labore quo quas. Mollitia ipsa cumque repellendus.</p>
+                    </div>
+                    <div class="feature__item-content-bottom">
+                        <img src="./images/img5.jpg" alt="bg" class="img__bg">
+                    </div>
+                </div>
+            </li>
 
-						<p class="more"><a href="#">More News</a></p>
-					</div><!-- end of .news -->
+            <li class="feature__item">
+                <div class="feature__item-img">
+                    <img src="./images/img7.jpg" alt="bg" class="img__bg">
+                    <img src="./images/img-bicycle-text.png" alt="brand" class="img__brand">
+                </div>
+                <div class="feature__item-content">
+                    <div class="feature__item-content-top">
+                        <img src="./images/icon4.png" alt="" class="feature__img-top">
+                        <h3 class="feature__heading">Retro Bike</h3>
+                        <p class="feature__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
+                            nesciunt facilis error, sunt asperiores amet hic aspernatur eius pariatur sequi assumenda
+                            vero laudantium labore quo quas. Mollitia ipsa cumque repellendus.</p>
+                    </div>
+                    <div class="feature__item-content-bottom">
+                        <img src="./images/img9.jpg" alt="bg" class="img__bg">
+                    </div>
+                </div>
+                <div class="feature__item-img">
+                    <img src="./images/img8.jpg" alt="bg" class="img__bg">
+                </div>
+            </li>
 
-					<div class="get-in-touch">
-						<h3>Get in touch</h3>
-						<p><span>Address:</span> 1458 Sample Road, Greenvalley, 12</p>
-						<p><span>Telephone:</span> +123-1234-5678</p>
-						<p><span>FAX:</span> +458-4578</p>
-						<p><span>Others:</span> +301 - 0125 - 01258</p>
-						<p><span>E-mail:</span> <a href="mailto:mail@yoursitename.com">mail@yoursitename.com</a></p>
-					</div><!-- end of .get-in-touch -->
+        </ul>
+    </div>
 
-					<div class="follow">
-						<img src="images/twitter-icon.png" alt="">
-						<p>Follow us on Twitter</p>
-						<p>Vestibulum posu eros vitae nunc <strong><a href="http://twitter.com/yourusername">twitter.com/yourusername</a></strong></p>
-					</div>
-				</div><!-- end of sidebar -->
-			</div><!-- end of .row -->
-		</div><!-- end of .container -->
-	</section><!-- end of .main .container-fluid -->
 
-	<!-- FOOTER -->
-	<footer class="container-fluid">
-		<div class="container">
-			<div class="row">
-				<div class="left">
-					© Copyright 2009. Your Site Name Dot Com. All Rights Reserved <br>
-					<a href="#">Home</a>
-					<a href="#">Contact</a>
-					<a href="#">RSS</a>
-				</div>
-				<div class="right">
-					Design by DreamTemplate 
-				</div>
-			</div>
-		</div>
-	</footer><!-- end of footer -->
 
+    <div class="tweet">
+        <i class="fab fa-twitter tweet__icon"></i>
+        <h2 class="tweet__heading">
+            <span class="tweet__location">AOD New York</span>
+            <span class="tweet__author">@aod</span>
+            <time class="tweet__time">35 min</time>
+        </h2>
+        <p class="tweet__content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum incidunt dolor provident quae id placeat fugit dolorum repellat corrupti quas saepe possimus, culpa nostrum iusto corporis, commodi rerum, officiis ratione?</p>
+        <ul class="tweet__pagi">
+            <li class="tweet__pagi-item is-active"></li>
+            <li class="tweet__pagi-item"></li>
+            <li class="tweet__pagi-item"></li>
+        </ul>
+    </div>
+
+
+
+
+    <ul class="images">
+        <li class="images__block">
+            <div class="images__block-item">
+                <div class="images__item">
+                    <img src="./images/img10.jpg" alt="img" class="images__item-bg">
+                    <div class="images__item-brand">
+                        <img src="./images/img-bicycle-sm.png" alt="">
+                        <h3 class="images__item-text"> Shop now</h3>
+                    </div>
+                </div>
+                <div class="images__item">
+                    <img src="./images/img11.jpg" alt="img" class="images__item-bg">
+                    <div class="images__item-brand">
+                        <img src="./images/img-bicycle-sm.png" alt="">
+                        <h3 class="images__item-text"> Shop now</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="images__block-item">
+                <div class="images__item">
+                    <img src="./images/img12.jpg" alt="img" class="images__item-bg">
+                    <div class="images__item-brand">
+                        <img src="./images/img-bicycle-sm.png" alt="">
+                        <h3 class="images__item-text"> Shop now</h3>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="images__block">
+            <div class="images__item">
+                <img src="images/img13.jpg" alt="" class="images__item-bg">
+                <div class="images__item-brand">
+                    <img src="images/img-bicycle-sm.png" alt="">
+                    <h3 class="images__item-text">Shop now</h3>
+                </div>
+            </div>
+            <div class="images__item">
+                <img src="images/img0.jpg" alt="" class="images__item-bg">
+                <div class="images__item-brand">
+                    <img src="images/img-bicycle-sm.png" alt="">
+                    <h3 class="images__item-text">Shop now</h3>
+                </div>
+            </div>
+        </li>
+        <li class="images__block">
+            <div class="images__block-item">
+                <div class="images__item">
+                    <img src="images/img2.jpg" alt="" class="images__item-bg">
+                    <div class="images__item-brand">
+                        <img src="images/img-bicycle-sm.png" alt="">
+                        <h3 class="images__item-text">Shop now</h3>
+                    </div>
+                </div>
+                <div class="images__item">
+                    <img src="images/img4.jpg" alt="" class="images__item-bg">
+                    <div class="images__item-brand">
+                        <img src="images/img-bicycle-sm.png" alt="">
+                        <h3 class="images__item-text">Shop now</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="images__block-item">
+                <div class="images__item">
+                    <img src="images/img6.jpg" alt="" class="images__item-bg">
+                    <div class="images__item-brand">
+                        <img src="images/img-bicycle-sm.png" alt="">
+                        <h3 class="images__item-text">Shop now</h3>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+
+    <div class="discover">
+        <a class="discover__btn" href="javascript:void(0)"> Discover the shop</a>
+    </div>
+
+
+    <div class="mail">
+        <img src="./images/yebo-logo.png" alt="logo" class="mail__logo">
+        <span class="mail__text">Stay on saddle!</span>
+        <form action="javascript:void(0)" class="mail__form">
+            <input type="email" name="email" class="mail__form-inp" placeholder="enter your email...">
+            <input type="submit" value="GO" class="mail__form-btn">
+        </form>
+    </div>
+
+
+    <div class="about">
+        <div class="about__info">
+            <p class="about__text">
+                <span class="about__info-location">AOD New York</span><br>
+                2250 Lexington Avenue <br>
+                New York, NY 10035  - info@domain.com
+            </p>
+        </div>
+        <div class="about__contact">
+            <i class="fab fa-twitter about__icon icon__twitter"></i>
+            <i class="fab fa-facebook-f about__icon icon__fb"></i>
+            <i class="fab fa-pinterest about__icon icon__pinterest"></i>
+        </div>
+        <div class="about__brand">
+            <span class="about__text">Handcrafted by</span>
+            <img src="./images/yebo-logo-sm.png" alt="logo" class="about__brand-logo">
+        </div>
+    </div>
 </body>
+
 </html>
