@@ -65,8 +65,8 @@ nav li::after {
     content: "";
     width: 0;
     height: 5px;
-    background: yellow;
-    transition: 1s;
+    background: #00ff6c;
+    transition: .5s;
 }
 nav li:hover::after {
     width: 100%;

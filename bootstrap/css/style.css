@@ -1,50 +1,68 @@
+
 body {
-  background: #333;
-  color: #fff;
+    min-height: 1000px;
 }
-
+/* Navigation */
 .navbar {
-  border-bottom: #008ed6 3px solid;
-  opacity: 0.8;
+    opacity: 0.8;
+    border-bottom: 3px solid var(--primary);
 }
 
-#home-section {
-  background: url(../img/home.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  min-height: 700px;
+/* Header */
+.header {
+    background: url('../img/home.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 150px;
+    color: white;
+}
+.backdrop {
+    position: relative;
+}
+.backdrop::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
 }
 
-#home-section .dark-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 700px;
-  background: rgba(0, 0, 0, 0.7);
+/* header desc */
+/* Đặt tên icon vì để sử dụng cho các mục khác */
+.icon {
+    font-size: 2rem;
+    color: var(--teal);
 }
 
-#home-section .home-inner {
-  padding-top: 150px;
+.header__form {
+    background:  var(--primary);
+    opacity: 0.8;
 }
 
-#home-section .card-form {
-  opacity: 0.8;
+/* Define section */
+.section__header {
+    padding: 2rem 0;
+    color: white;
+}
+/* Explore */
+.bg--dark {
+    background: var(--dark);
+}
+.bg--primary {
+    background: var(--primary);
+}
+.color--white {
+    color: white;
+}
+.color--secondary {
+    color: var(--secondary);
 }
 
-#home-section .fas,
-#create-section .fas {
-  color: #008ed6;
-  background: #fff;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-#explore-section .fas,
-#share-section .fas {
-  background: #333;
-  color: #fff;
-  padding: 5px;
-  border-radius: 5px;
+.section__img > img {
+    max-width: 100%;
+    height: auto;
 }
