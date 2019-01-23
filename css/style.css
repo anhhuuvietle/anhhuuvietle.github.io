@@ -3,20 +3,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   margin: 0;
   padding: 0;
   width: 100%;
   font-family: "Pacifico", cursive;
+  color: white;
+  min-height: 100vh;
 }
-
-.container a {
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-fluid a {
   color: #fff;
 }
+.container-fluid ul {
+  list-style-position: outside;
+  text-align: left;
+}
 .target {
-  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
-  animation: neon2 1.5s ease-in-out infinite alternate;
+  -webkit-animation: neon6 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon6 1.5s ease-in-out infinite alternate;
+  animation: neon6 1.5s ease-in-out infinite alternate;
   color: white;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -35,17 +44,28 @@ body {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 .list-project a:hover {
-  -webkit-animation: neon3 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon3 1.5s ease-in-out infinite alternate;
-  animation: neon3 1.5s ease-in-out infinite alternate;
+  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
   color: #ffffff;
 }
 
 .interesting {
-  margin: 50px 0;
+  margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+  .target {
+    font-size: 16px;
+    text-transform: uppercase;
+    word-spacing: 10px;
+  }
+  .list-project a {
+    font-size: 2.5rem;
+  }
 }
 
 /* FOR NEON TEXT */
