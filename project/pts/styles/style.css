@@ -1,0 +1,578 @@
+/* Setup basics CSS */
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+}
+a {
+  text-decoration: underline;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+button {
+  cursor: pointer;
+}
+input,
+textarea,
+button {
+  outline: none;
+  box-shadow: none;
+  font-family: "Lato", sans-serif;
+}
+/* Your style start from here */
+
+/* SET UP BEGINNING */
+.wrapper {
+  max-width: 160rem;
+  margin: 0 auto;
+}
+:root {
+  --primary: #64c29e;
+  --heading: #353738;
+  --text: #848789;
+  --input-border: #d3d7d9;
+  --input-text: #cdcdcd;
+  --bg-light: #f7f7f7;
+  --bg-dark: #282f35;
+}
+
+/* BLOCK HEADER  */
+.header {
+  min-height: 80rem;
+  background: url("../images/img-bg-header.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+}
+.nav {
+  margin-top: 3.5rem;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+.nav__item {
+  padding: 0 4rem;
+  /*  */
+  position: relative;
+}
+.nav__link {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--heading);
+  /*  */
+  position: relative;
+  display: block;
+}
+
+.nav__item:first-child::after,
+.nav__item:nth-child(4)::after {
+  content: ".";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 2rem;
+}
+
+.nav__link:hover {
+  color: var(--primary);
+}
+
+/* feature header */
+
+.feature__header {
+  padding: 11rem 1.5rem 14rem;
+  background-color: var(--bg-light);
+}
+.feature__img-top {
+  margin: 0 auto 3rem;
+}
+.feature__heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--heading);
+  line-height: 1.6;
+}
+.feature__header-desc {
+  font-size: 1.8rem;
+  color: var(--text);
+  line-height: 1.9;
+  max-width: 108rem;
+  margin: 0 auto;
+  /* KHÔNG MARGIN BOTTOM VÌ PHÍA TRÊN THẰNG CHA ĐÃ PADDING BOTTOM RỒI */
+  text-align: center;
+}
+
+/* feature list */
+
+.feature__item {
+  display: flex;
+  flex-wrap: wrap;
+  height: 60rem;
+  overflow: hidden;
+}
+.feature__item-img {
+  width: 67%;
+  /*  */
+  position: relative;
+}
+.feature__item-content {
+  width: 33%;
+  background: red;
+}
+
+.feature__item .img__bg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.feature__item .img__brand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.feature__item-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature__item-content-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 7rem;
+  background: white;
+  height: 67%;
+  /*  */
+  position: relative;
+}
+/* Thằng img và heading đã css ở trên*/
+.feature__item-text {
+  text-align: justify;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  padding-bottom: 3rem;
+  /*  */
+  position: relative;
+}
+.feature__item-text::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: var(--bg-light);
+  width: 5rem;
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.feature__item-content-top:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  z-index: 10;
+  transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+.feature__item-content-bottom {
+  height: 33%;
+}
+
+/*  */
+.feature__item:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+.feature__item:last-child > .feature__item-img {
+  width: 33%;
+}
+.feature__item:last-child > .feature__item-content {
+  width: 34%;
+}
+
+/* TWEET */
+.tweet {
+  padding: 12.5rem 1.5rem 7rem;
+  background: var(--bg-light);
+  text-align: center;
+}
+.tweet__icon {
+  color: #54c7ee;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+.tweet__heading {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+.tweet__location,
+.tweet__author {
+  font-weight: bold;
+  color: var(--heading);
+}
+.tweet__time {
+  color: var(--text);
+  font-weight: 300;
+  padding-left: 1.5rem;
+  margin-left: 1.5rem;
+
+  /*  */
+  position: relative;
+}
+.tweet__time::before {
+  content: "/";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tweet__content {
+  font-size: 2.4rem;
+  line-height: 1.4;
+  max-width: 104.5rem;
+  color: var(--text);
+  margin: 0 auto 10rem;
+}
+
+.tweet__pagi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tweet__pagi-item {
+  height: 1.1rem;
+  width: 1.1rem;
+  border: 1px solid var(--text);
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+.tweet__pagi-item.is-active {
+  background: var(--text);
+}
+
+/* SHOP IMAGES  */
+.images {
+  display: flex;
+  height: 53.5rem;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.images__block {
+  width: 33.3333%;
+  height: 100%;
+  display: flex;
+}
+.images__block:first-child {
+  flex-direction: column;
+}
+
+.images__block-item {
+  width: 100%;
+  height: 50%;
+}
+.images__block-item:first-child {
+  display: flex;
+}
+.images__item {
+  width: 50%;
+  height: 100%;
+  /*  */
+  position: relative;
+}
+.images__block-item:last-child .images__item {
+  width: 100%;
+}
+.images__block:last-child {
+  flex-direction: column-reverse;
+}
+
+/* Inside images item */
+.images__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(100, 194, 158, 0.8);
+  z-index: 10;
+  display: none;
+}
+.images__item-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.images__item-brand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  text-align: center;
+  display: none;
+}
+.images__item-brand > img {
+  margin: 0 auto;
+}
+.images__item-text {
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+.images__item:hover:before,
+.images__item:hover .images__item-brand {
+  display: block;
+}
+
+/* DISCOVER */
+.discover {
+  height: 20rem;
+  background: var(--bg-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.discover__btn {
+  min-width: 30rem;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid var(--input-border);
+  transition: 0.3s;
+}
+.discover__btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+/* mail */
+.mail {
+  padding: 10rem 1.5rem;
+  background: white;
+  text-align: center;
+}
+.mail__logo {
+  margin: 0 auto 3.5rem;
+}
+.mail__text {
+  font-size: 2.4rem;
+  font-style: italic;
+  color: var(--text);
+  margin-bottom: 3.5rem;
+  display: inline-block;
+}
+.mail__form {
+  display: flex;
+  justify-content: space-between;
+  max-width: 54rem;
+  margin: 0 auto;
+}
+.mail__form-inp {
+  width: 74%;
+  padding: 2.5rem;
+  border: 1px solid var(--input-border);
+  color: var(--input-text);
+  font-size: 2rem;
+  font-style: italic;
+}
+.mail__form-btn {
+  width: 25%;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  color: white;
+  border: none;
+  outline: none;
+  background: var(--primary);
+  cursor: pointer;
+  font-weight: 300;
+}
+
+/* about */
+.about {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 9rem 0;
+  background: var(--bg-light);
+}
+.about__text {
+  line-height: 1.8rem;
+  color: var(--text);
+  font-size: 1.39rem;
+  font-style: italic;
+}
+
+.about__info-location {
+  font-weight: bold;
+  font-size: 1.6rem;
+  font-style: none;
+}
+
+.about__contact-item {
+  padding: 0 0.7rem;
+  display: inline-block;
+}
+.about__icon {
+  color: white;
+  height: 3.5rem;
+  width: 3.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 3.5rem;
+  border-radius: 50%;
+}
+.icon__fb {
+  background: #537bbd;
+}
+.icon__twitter {
+  background: #78cdf0;
+}
+.icon__pinterest {
+  background: #eb5755;
+}
+.about__brand {
+  display: flex;
+  align-items: center;
+}
+.about__brand-logo {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .btn__collapse {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  nav {
+    width: 100%;
+  }
+  .nav__item {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .nav__item::after {
+    display: none;
+  }
+  .btn__collapse,
+  .nav__bg {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+    text-align: center;
+    line-height: 5rem;
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .nav__bg {
+    background-color: #eee;
+    z-index: 8;
+    transition: transform 0.25s linear;
+  }
+  .nav__list {
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    transform: translateX(-100%);
+    transition: transform 0.25s linear;
+  }
+
+  .inp__collapse:checked + .nav__bg {
+    transform: scale(80);
+  }
+
+  .inp__collapse:checked ~ .nav__list {
+    transform: translateX(0);
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .feature__item-content-top {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .feature__item {
+    height: auto;
+    flex-direction: column;
+  }
+  .feature .feature__item > .feature__item-img,
+  .feature .feature__item > .feature__item-content {
+    width: 100%;
+  }
+  .feature__item-content-top {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  /* Mấy thằng ảnh phía dưới */
+  .images {
+    height: auto;
+    flex-direction: column;
+  }
+  .images__block {
+    width: 100%;
+  }
+  .images__item {
+    height: auto;
+  }
+
+  /* About */
+  .about {
+    flex-direction: column;
+    padding: 1.5rem;
+    /* align-items: center; đã làm phía trên */
+    text-align: center;
+  }
+  .about > * {
+    margin-top: 1.5rem;
+  }
+}
