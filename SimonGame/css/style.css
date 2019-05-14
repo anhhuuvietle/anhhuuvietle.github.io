@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --red: darkred;
+  --red-press: lightcoral;
+  --yellow: goldenrod;
+  --yellow-press: lightyellow;
+  --blue: darkblue;
+  --blue-press: lightblue;
+  --green: darkgreen;
+  --green-press: lightgreen;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.simon {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 7px #555, 0 0 0 12px #000, 0 0 0 20px #555;
+  position: relative;
+  overflow: hidden;
+}
+.simon__item {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  border: 3px solid black;
+}
+.red {
+  background: var(--red);
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.red.press {
+  background: var(--red-press);
+}
+.blue {
+  background: var(--blue);
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+.blue.press {
+  background: var(--blue-press);
+}
+.yellow {
+  background: var(--yellow);
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+}
+.yellow.press {
+  background: var(--yellow-press);
+}
+.green {
+  background: var(--green);
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, 50%);
+}
+.green.press {
+  background: var(--green-press);
+}
+.simon__control {
+  position: absolute;
+  z-index: 2;
+  height: 50%;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: gray;
+  border-radius: 50%;
+  border: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.simon__name {
+  text-transform: uppercase;
+  color: white;
+  font-size: 40px;
+  margin: 5px 0;
+}
+.simon__power {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin: 5px 0;
+}
+.simon__power input {
+  margin-right: 5px;
+}
+.simon__start {
+  padding: 10px 20px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+  cursor: pointer;
+}
+.simon__start:hover {
+  background: aqua;
+}
+.simon__start:active {
+  font-weight: bold;
+}
+
+.simon__count {
+  margin: 5px 0;
+  text-align: center;
+}
+.simon__count-number {
+  padding: 10px 20px;
+  text-align: center;
+  background: #330000;
+  color: red;
+}
+.simon__count-text {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+audio {
+  display: none;
+}

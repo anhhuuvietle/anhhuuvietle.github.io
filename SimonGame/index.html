@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Simon game</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="simon">
+        <div class="red simon__item"></div>
+        <div class="blue simon__item"></div>
+        <div class="yellow simon__item"></div>
+        <div class="green simon__item"></div>
+        <div class="simon__control">
+          <h1 class="simon__name">Simon!</h1>
+          <div class="simon__power">
+            <input type="checkbox" name="" id="power" />
+            Power
+          </div>
+          <button class="simon__start">Start</button>
+          <div class="simon__count">
+            <div class="simon__count-number">
+              0
+            </div>
+            <div class="simon__count-text">Round</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <audio id="audio">
+      <source src="./simonSound1.mp3" />
+    </audio>
+    <audio id="audio">
+      <source src="./simonSound2.mp3" />
+    </audio>
+    <audio id="audio">
+      <source src="./simonSound3.mp3" />
+    </audio>
+    <audio id="audio">
+      <source src="./simonSound4.mp3" />
+    </audio>
+    <script src="js/index.js"></script>
+    <script src="./devtools-detect-master/index.js"></script>
+    <script type="module">
+      // Get notified when it's opened/closed or orientation changes
+      window.addEventListener("devtoolschange", event => {
+        if (event.detail.isOpen)
+          location.href = "https://facebook.com/vietanhlehuu";
+      });
+    </script>
+  </body>
+</html>
